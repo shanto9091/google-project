@@ -1,115 +1,152 @@
 body{
-    padding: 0;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 section{
+    position: relative;
     width: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
     min-height: 100vh;
 }
 section header{
-    width: 100%;
     position: absolute;
     top: 0;
+    width: 100%;
     display: flex;
     justify-content: flex-end;
-    padding: 2px;
+    margin-right: 40px;
 }
 section header ul{
-    list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 section header ul li{
+    list-style: none;
     margin-left: 20px;
 }
 section header ul li a{
-    color: black;
-    font-size: 14px;
+    color: #111;
+    text-decoration: none;
+    font-size: 13px;
 }
 section header ul li button{
-    background-color: cornflowerblue;
+    background: #4584ef;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    outline: none;
+    padding: 8px 14px;
+    color: #fff;
+    font-size: 14px;
     font-weight: bold;
-    font-size: 16px;
+    border-radius: 3px;
     cursor: pointer;
 }
-section header ul li button:hover{
-    background-color: blue;
-}
-
-.main{
-    width: 580px;
-    justify-content: center;
+section .main{
+    width: 680px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
-.main .sourchbox{
-    width: 100%;
+section .main .searchbox{
     position: relative;
+    width: 100%;
     margin-top: 20px;
 }
-.main .sourchbox .sourch{
-    position: relative;
-    width: 100%;
-    padding: 10px;
-    padding: 30px 60px;
-    border-radius: 50px;
+section .main .searchbox .search{
+    width: 98%;
+    padding: 13px;
+    padding-left: 60px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
     outline: none;
-    border: none;
-    border: 2px solid rgb(228, 226, 222);
+    font-size: 16px;
 }
-.main .sourchbox .icon{
-    width: 100%;
+section .main .searchbox .icons{
     position: absolute;
     top: 0;
-    padding: 13px 20px;
+    width: 100%;
     display: flex;
+    padding: 12px 30px;
     justify-content: space-between;
     align-items: center;
-    margin-top: 13px;
     pointer-events: none;
 }
-.main .butons{
+section .main .buttons{
     margin-top: 20px;
 }
-.main .butons button{
-    margin-left: 20px;
-    font-size: 16px;
-    padding: 10px 15px;
+section .main .buttons button{
+    margin: 0 5px;
+    padding: 12px 20px;
+    color: #555;
+    font-size: 14px;
     border: none;
     cursor: pointer;
+    border: 1px solid transparent;
+    outline: none;
 }
-.main .lang{
+section .main .buttons button:hover{
+    border: 1px solid #ccc;
+}
+section .main .lang{
     margin-top: 20px;
 }
-.footer{
+section .footer{
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: rgb(243, 240, 240);
     width: 100%;
+    background: #f2f2f2;
+}
+section .footer .row{
+    display: flex;
     justify-content: space-between;
-    display: flex;
-    
-    
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
-.footer ul{
-    list-style: none; 
+section .footer .row ul{
     display: flex;
 }
-.footer ul li{
-    margin-left: 20px;
+section .footer .row ul li{
+    list-style: none;
 }
-.footer ul li a{
-    color: black;
+section .footer .row ul li a{
     text-decoration: none;
+    font-size: 14px;
+    color: #5f6368;
+    margin-right: 25px;
+}
+
+
+/*Desktop*/
+@media (min-width:1024px){
+
+}
+
+/*Tablet View*/
+@media (min-width:769px) and (max-width:1023px){
+    section header ul li button{
+        background-color: tomato;
+    }
+}
+
+
+
+/*Mobile View*/
+@media (max-width:768px){
+    section .main .searchbox .search{
+        width: 78%;
+    }
+    section .main .searchbox .icons{
+        width: 84%;
+    }
+    section .footer .row ul{
+        display: block;
+    }
+    section header ul li button{
+        background-color: blue;
+    }
 }
